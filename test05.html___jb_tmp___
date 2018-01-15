@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    function load () {
+      var  result  ={
+        "result": true,
+        "operateCode": 0,
+        "msg": null,
+        "data": {
+          "playClassList": [{
+            "name": "我的玩法",
+            "childClassList": [{
+              "name": "",
+              "playList": [{
+                "playName": "冠军直选",
+                "playType": 3025,
+                "remark": "如：选择1，开奖号码为1,*,*,*,*,*,*,*,*,*即为中奖。冠军 投注的号码与开奖号码的第一位号码相同且顺序一致，即为中奖。",
+                "playOdds": 10.0,
+                "showOdds": 10.0,
+                "maxWater": 2000.0,
+                "minWater": 1700.0,
+                "maxUserWater": 2000.0,
+                "defaultWater": 2000.0,
+                "size": 3
+              },
+                {
+                  "playName": "亚军直选",
+                  "playType": 3026,
+                  "remark": "如：选择1，开奖号码为*,1,*,*,*,*,*,*,*,*即为中奖。亚军 投注的号码与开奖号码的第二位号码相同且顺序一致，即为中奖。",
+                  "playOdds": 10.0,
+                  "showOdds": 10.0,
+                  "maxWater": 2000.0,
+                  "minWater": 1700.0,
+                  "maxUserWater": 2000.0,
+                  "defaultWater": 2000.0,
+                  "size": 3
+                },
+                {
+                  "playName": "第四名",
+                  "playType": 3028,
+                  "remark": "如：选择1，开奖号码为*,*,*,1,*,*,*,*,*,*即为中奖。第四名 投注的号码与开奖号码的第四位号码相同且顺序一致，即为中奖。",
+                  "playOdds": 10.0,
+                  "showOdds": 10.0,
+                  "maxWater": 2000.0,
+                  "minWater": 1700.0,
+                  "maxUserWater": 2000.0,
+                  "defaultWater": 2000.0,
+                  "size": 3
+                },
+                {
+                  "playName": "冠亚：大",
+                  "playType": 3019,
+                  "remark": "开奖号码第一位和第二位的和值为：12~19即为大",
+                  "playOdds": 2.125,
+                  "showOdds": 2.12,
+                  "maxWater": 2000.0,
+                  "minWater": 1700.0,
+                  "maxUserWater": 2000.0,
+                  "defaultWater": 2000.0,
+                  "size": 3
+                },
+                {
+                  "playName": "冠亚：小",
+                  "playType": 3020,
+                  "remark": "开奖号码第一位和第二位的和值为：3~11即为小",
+                  "playOdds": 1.8,
+                  "showOdds": 1.8,
+                  "maxWater": 2000.0,
+                  "minWater": 1700.0,
+                  "maxUserWater": 2000.0,
+                  "defaultWater": 2000.0,
+                  "size": 3
+                },
+                {
+                  "playName": "冠亚：单",
+                  "playType": 3021,
+                  "remark": "开奖号码第一位和第二位的和值为单：3,5,7,9,11,13,15,17,19，即为单",
+                  "playOdds": 1.8,
+                  "showOdds": 1.8,
+                  "maxWater": 2000.0,
+                  "minWater": 1700.0,
+                  "maxUserWater": 2000.0,
+                  "defaultWater": 2000.0,
+                  "size": 3
+                },
+                {
+                  "playName": "冠亚：双",
+                  "playType": 3022,
+                  "remark": "开奖号码第一位和第二位的和值为双：4,6,8,10,12,14,16,18，即为双",
+                  "playOdds": 2.125,
+                  "showOdds": 2.12,
+                  "maxWater": 2000.0,
+                  "minWater": 1700.0,
+                  "maxUserWater": 2000.0,
+                  "defaultWater": 2000.0,
+                  "size": 3
+                },
+                {
+                  "playName": "冠亚：龙",
+                  "playType": 3023,
+                  "remark": "开奖号码第一位大于第二位则为：龙",
+                  "playOdds": 2.0,
+                  "showOdds": 2.0,
+                  "maxWater": 2000.0,
+                  "minWater": 1700.0,
+                  "maxUserWater": 2000.0,
+                  "defaultWater": 2000.0,
+                  "size": 4
+                },
+                {
+                  "playName": "冠亚和值",
+                  "playType": 3037,
+                  "remark": "所选数字与开奖前两个号码的和值相同，即中奖。",
+                  "playOdds": 45.0,
+                  "showOdds": 45.0,
+                  "maxWater": 2000.0,
+                  "minWater": 1700.0,
+                  "maxUserWater": 2000.0,
+                  "defaultWater": 2000.0,
+                  "size": 4
+                },
+                {
+                  "playName": "冠亚：虎",
+                  "playType": 3024,
+                  "remark": "开奖号码第一位小于第二位则为：虎",
+                  "playOdds": 2.0,
+                  "showOdds": 2.0,
+                  "maxWater": 2000.0,
+                  "minWater": 1700.0,
+                  "maxUserWater": 2000.0,
+                  "defaultWater": 2000.0,
+                  "size": 4
+                },
+                {
+                  "playName": "前二直选",
+                  "playType": 3035,
+                  "remark": "如：第一位选择01，第二位选择02.开奖号码为：01,02,*,*,*,*,*,*,*,*即为中奖。冠军，亚军 投注的2个号码与开奖号码的第一位、第二位号码相同且顺序一致，即为中奖。",
+                  "playOdds": 90.0,
+                  "showOdds": 90.0,
+                  "maxWater": 2000.0,
+                  "minWater": 1700.0,
+                  "maxUserWater": 2000.0,
+                  "defaultWater": 2000.0,
+                  "size": 4
+                },
+                {
+                  "playName": "前三和值",
+                  "playType": 3038,
+                  "remark": "所选数字与开奖前三个号码的和值相同，即中奖。",
+                  "playOdds": 120.0,
+                  "showOdds": 120.0,
+                  "maxWater": 2000.0,
+                  "minWater": 1700.0,
+                  "maxUserWater": 2000.0,
+                  "defaultWater": 2000.0,
+                  "size": 4
+                },
+                {
+                  "playName": "前三直选",
+                  "playType": 3036,
+                  "remark": "如：如：第一位选择01，第二位选择02.第三位03，开奖号码为：01,02,03,*,*,*,*,*,*,*即为中奖。冠军，亚军，季军 投注的3个号码与开奖号码的第一位、第二位、第三位号码相同且顺序一致，即为中奖。",
+                  "playOdds": 720.0,
+                  "showOdds": 720.0,
+                  "maxWater": 2000.0,
+                  "minWater": 1700.0,
+                  "maxUserWater": 2000.0,
+                  "defaultWater": 2000.0,
+                  "size": 4
+                },
+                {
+                  "playName": "冠军：小",
+                  "playType": 3002,
+                  "remark": "开奖号码第一位数为1~5则为小",
+                  "playOdds": 2.0,
+                  "showOdds": 2.0,
+                  "maxWater": 2000.0,
+                  "minWater": 1700.0,
+                  "maxUserWater": 2000.0,
+                  "defaultWater": 2000.0,
+                  "size": 3
+                },
+                {
+                  "playName": "冠军：单",
+                  "playType": 3003,
+                  "remark": "开奖号码第一位数为1、3、5、7、9则为单",
+                  "playOdds": 2.0,
+                  "showOdds": 2.0,
+                  "maxWater": 2000.0,
+                  "minWater": 1700.0,
+                  "maxUserWater": 2000.0,
+                  "defaultWater": 2000.0,
+                  "size": 3
+                },
+                {
+                  "playName": "冠军：双",
+                  "playType": 3004,
+                  "remark": "开奖号码第一位数为：2、4、6、8、10则为双",
+                  "playOdds": 2.0,
+                  "showOdds": 2.0,
+                  "maxWater": 2000.0,
+                  "minWater": 1700.0,
+                  "maxUserWater": 2000.0,
+                  "defaultWater": 2000.0,
+                  "size": 3
+                }]
+            }]
+          },
+            {
+              "name": "双面玩法",
+              "childClassList": [{
+                "name": "大小定位",
+                "playList": [{
+                  "playName": "冠军直选",
+                  "playType": 3025,
+                  "remark": "如：选择1，开奖号码为1,*,*,*,*,*,*,*,*,*即为中奖。冠军 投注的号码与开奖号码的第一位号码相同且顺序一致，即为中奖。",
+                  "playOdds": 10.0,
+                  "showOdds": 10.0,
+                  "maxWater": 2000.0,
+                  "minWater": 1700.0,
+                  "maxUserWater": 2000.0,
+                  "defaultWater": 2000.0,
+                  "size": 3
+                },
+                  {
+                    "playName": "亚军直选",
+                    "playType": 3026,
+                    "remark": "如：选择1，开奖号码为*,1,*,*,*,*,*,*,*,*即为中奖。亚军 投注的号码与开奖号码的第二位号码相同且顺序一致，即为中奖。",
+                    "playOdds": 10.0,
+                    "showOdds": 10.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "季军直选",
+                    "playType": 3027,
+                    "remark": "如：选择1，开奖号码为*,*,1,*,*,*,*,*,*,*即为中奖。季军 投注的号码与开奖号码的第三位号码相同且顺序一致，即为中奖。",
+                    "playOdds": 10.0,
+                    "showOdds": 10.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "第四名",
+                    "playType": 3028,
+                    "remark": "如：选择1，开奖号码为*,*,*,1,*,*,*,*,*,*即为中奖。第四名 投注的号码与开奖号码的第四位号码相同且顺序一致，即为中奖。",
+                    "playOdds": 10.0,
+                    "showOdds": 10.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "冠亚：大",
+                    "playType": 3019,
+                    "remark": "开奖号码第一位和第二位的和值为：12~19即为大",
+                    "playOdds": 2.125,
+                    "showOdds": 2.12,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "冠亚：小",
+                    "playType": 3020,
+                    "remark": "开奖号码第一位和第二位的和值为：3~11即为小",
+                    "playOdds": 1.8,
+                    "showOdds": 1.8,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "冠亚：单",
+                    "playType": 3021,
+                    "remark": "开奖号码第一位和第二位的和值为单：3,5,7,9,11,13,15,17,19，即为单",
+                    "playOdds": 1.8,
+                    "showOdds": 1.8,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "冠亚：双",
+                    "playType": 3022,
+                    "remark": "开奖号码第一位和第二位的和值为双：4,6,8,10,12,14,16,18，即为双",
+                    "playOdds": 2.125,
+                    "showOdds": 2.12,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "冠亚：龙",
+                    "playType": 3023,
+                    "remark": "开奖号码第一位大于第二位则为：龙",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 4
+                  },
+                  {
+                    "playName": "冠亚和值",
+                    "playType": 3037,
+                    "remark": "所选数字与开奖前两个号码的和值相同，即中奖。",
+                    "playOdds": 45.0,
+                    "showOdds": 45.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 4
+                  },
+                  {
+                    "playName": "冠亚：虎",
+                    "playType": 3024,
+                    "remark": "开奖号码第一位小于第二位则为：虎",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 4
+                  },
+                  {
+                    "playName": "前二直选",
+                    "playType": 3035,
+                    "remark": "如：第一位选择01，第二位选择02.开奖号码为：01,02,*,*,*,*,*,*,*,*即为中奖。冠军，亚军 投注的2个号码与开奖号码的第一位、第二位号码相同且顺序一致，即为中奖。",
+                    "playOdds": 90.0,
+                    "showOdds": 90.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 4
+                  },
+                  {
+                    "playName": "前三和值",
+                    "playType": 3038,
+                    "remark": "所选数字与开奖前三个号码的和值相同，即中奖。",
+                    "playOdds": 120.0,
+                    "showOdds": 120.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 4
+                  },
+                  {
+                    "playName": "前三直选",
+                    "playType": 3036,
+                    "remark": "如：如：第一位选择01，第二位选择02.第三位03，开奖号码为：01,02,03,*,*,*,*,*,*,*即为中奖。冠军，亚军，季军 投注的3个号码与开奖号码的第一位、第二位、第三位号码相同且顺序一致，即为中奖。",
+                    "playOdds": 720.0,
+                    "showOdds": 720.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 4
+                  },
+                  {
+                    "playName": "冠军：大",
+                    "playType": 3001,
+                    "remark": "开奖号码第一位数为6~10则为大",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "冠军：小",
+                    "playType": 3002,
+                    "remark": "开奖号码第一位数为1~5则为小",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "冠军：单",
+                    "playType": 3003,
+                    "remark": "开奖号码第一位数为1、3、5、7、9则为单",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "冠军：双",
+                    "playType": 3004,
+                    "remark": "开奖号码第一位数为：2、4、6、8、10则为双",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "亚军：小",
+                    "playType": 3008,
+                    "remark": "开奖号码第二位数为1~5则为小",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "亚军：单",
+                    "playType": 3009,
+                    "remark": "开奖号码第二位数为1、3、5、7、9则为单",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "亚军：双",
+                    "playType": 3010,
+                    "remark": "开奖号码第二位数为2、4、6、8、10则为双",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "季军：大",
+                    "playType": 3013,
+                    "remark": "开奖号码第三位数为6~10则为大",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "季军：小",
+                    "playType": 3014,
+                    "remark": "开奖号码第三位数为1~5则为小",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "季军：单",
+                    "playType": 3015,
+                    "remark": "开奖号码第三位数为1、3、5、7、9则为单",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "季军：双",
+                    "playType": 3016,
+                    "remark": "开奖号码第三位数为2、4、6、8、10则为双",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "冠军：龙",
+                    "playType": 3005,
+                    "remark": "开奖号码第一位数大于第十名号码视为“龙”",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "冠军：虎",
+                    "playType": 3006,
+                    "remark": "开奖号码第一位数小于第十名号码视为“虎”",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "亚军：龙",
+                    "playType": 3011,
+                    "remark": "开奖号码第二位数大于第八名号码视为“龙”",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "亚军：虎",
+                    "playType": 3012,
+                    "remark": "开奖号码第二位数小于第八名号码视为“虎”",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 3
+                  },
+                  {
+                    "playName": "季军：龙",
+                    "playType": 3017,
+                    "remark": "开奖号码第三位数大于第七名号码视为“龙”",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 6
+                  },
+                  {
+                    "playName": "季军：虎",
+                    "playType": 3018,
+                    "remark": "开奖号码第三位数小于第七名号码视为“虎”",
+                    "playOdds": 2.0,
+                    "showOdds": 2.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 6
+                  },
+                  {
+                    "playName": "第五名",
+                    "playType": 3029,
+                    "remark": "如：选择1，开奖号码为*,*,*,*,1,*,*,*,*,*即为中奖。第五名 投注的号码与开奖号码的第五位号码相同且顺序一致，即为中奖。",
+                    "playOdds": 10.0,
+                    "showOdds": 10.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 6
+                  },
+                  {
+                    "playName": "第六名",
+                    "playType": 3030,
+                    "remark": "如：选择1，开奖号码为*,*,*,*,*,1,*,*,*,*即为中奖。第六名 投注的号码与开奖号码的第六位号码相同且顺序一致，即为中奖。",
+                    "playOdds": 10.0,
+                    "showOdds": 10.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 6
+                  },
+                  {
+                    "playName": "第七名",
+                    "playType": 3031,
+                    "remark": "如：选择1，开奖号码为*,*,*,*,*,*,1,*,*,*即为中奖。第七名 投注的号码与开奖号码的第七位号码相同且顺序一致，即为中奖。",
+                    "playOdds": 10.0,
+                    "showOdds": 10.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 6
+                  },
+                  {
+                    "playName": "第八名",
+                    "playType": 3032,
+                    "remark": "如：选择1，开奖号码为*,*,*,*,*,*,*,1,*,*即为中奖。第八名 投注的号码与开奖号码的第八位号码相同且顺序一致，即为中奖。",
+                    "playOdds": 10.0,
+                    "showOdds": 10.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 6
+                  },
+                  {
+                    "playName": "第九名",
+                    "playType": 3033,
+                    "remark": "如：选择1，开奖号码为*,*,*,*,*,*,*,*,1,*即为中奖。第九名 投注的号码与开奖号码的第九位号码相同且顺序一致，即为中奖。",
+                    "playOdds": 10.0,
+                    "showOdds": 10.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 6
+                  },
+                  {
+                    "playName": "第十名",
+                    "playType": 3034,
+                    "remark": "如：选择1，开奖号码为*,*,*,*,*,*,*,*,*,1即为中奖。第十名 投注的号码与开奖号码的第十位号码相同且顺序一致，即为中奖。",
+                    "playOdds": 10.0,
+                    "showOdds": 10.0,
+                    "maxWater": 2000.0,
+                    "minWater": 1700.0,
+                    "maxUserWater": 2000.0,
+                    "defaultWater": 2000.0,
+                    "size": 6
+                  }]
+              }]
+            }]
+        }
+      }
+      var one = result.data.playClassList;
+      console.log(one.length);
+      for(var i =0;i<one.length;i++){
+        console.log(one[i])
+        var two = one[i].childClassList[0].playList;
+        for(var j =0;j<two.length;j++){
+          console.log(two[j])
+        }
+
+      }
+
+    }
+  function renddata (arr1) {
+     let vm = this;
+     let result = [];
+     let temp   = [];
+     for (var i = 0; i < arr1.length; i++) {
+       if (i > 0 && arr1[i] != arr1[i - 1]|| temp.length > 5) {
+         result.push(temp);
+         temp = [];
+       }
+       temp.push(arr1[i]);
+       if (i + 1 == arr1.length) {
+         result.push(temp);
+       }
+     }
+     vm.rend = result;
+   }
+  </script>
+</head>
+<body onload="load();">
+
+</body>
+</html>
+   
+                         

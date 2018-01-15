@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <script>
+
+    function movestring (a) {
+      var h = "";
+      var k = "01";
+      var b = "";
+      var f = "";
+      var j = "";
+      var g = false;
+      var c = false;
+      for (var e = 0; e < a.length; e++) {
+        if (g == false) {
+          h += a.substr(e, 1)
+        }
+        if (g == false && a.substr(e, 1) == "1") {
+          c = true
+        } else {
+          if (g == false && c == true && a.substr(e, 1) == "0") {
+            g = true
+          } else {
+            if (g == true) {
+              b += a.substr(e, 1)
+            }
+          }
+        }
+      }
+      h = h.substr(0, h.length - 2);
+      for (var d = 0; d < h.length; d++) {
+        if (h.substr(d, 1) == "1") {
+          f += h.substr(d, 1)
+        } else {
+          if (h.substr(d, 1) == "0") {
+            j += h.substr(d, 1)
+          }
+        }
+      }
+      h = f + j;
+      return h + k + b
+
+
+    }
+    function  getCombination (o, c) {
+      var l = o.length;
+      var r = new Array();
+      var f = new Array();
+      if (c > l) {
+        return r
+      }
+      if (c == 1) {
+        return o
+      }
+      if (l == c) {
+        r[0] = o.join(",");
+        return r
+      }
+      var a = "";
+      var b = "";
+      var s = "";
+      for (var g = 0; g < c; g++) {
+        a += "1";
+        b += "1"
+      }
+      for (var e = 0; e < l - c; e++) {
+        a += "0"
+      }
+      for (var d = 0; d < c; d++) {
+        s += o[d] + ","
+      }
+      r[0] = s.substr(0, s.length - 1);
+      var h = 1;
+      s = "";
+      while (a.substr(a.length - c, c) != b) {
+        a = movestring(a);
+        for (var d = 0; d < l; d++) {
+          if (a.substr(d, 1) == "1") {
+            s += o[d] + ","
+          }
+        }
+        r[h] = s.substr(0, s.length - 1);
+        s = "";
+        h++
+      }
+      console.log(r)
+      return r
+
+    }
+
+    function datasel () {
+      var datasel = [ 'w', 'q', 'b', 's', 'g' ];
+      var newsel = [];
+      for (var i = 0; i < datasel.length; i++) {
+        newsel.push(datasel[i]);
+      }
+        var aPositionCombo = getCombination(newsel, 4);
+      console.log("aPositionCombo:"+aPositionCombo)
+        var nums = 0;
+        var iComboLen = aPositionCombo.length;
+        var aCombo = [];
+        var iLen = 0;
+        var tmpNums = 1;
+        for (j = 0; j < iComboLen; j++) {
+
+          aCombo = aPositionCombo[j].split(",");
+          iLen = aCombo.length;
+          tmpNums = 1;
+          for (h = 0; h < iLen; h++) {
+            tmpNums *=this.rulecode + ".count."
+              + aCombo[h]
+          }
+          nums += tmpNums
+        }
+         console.log(nums)
+    }
+    datasel();
+  </script>
+</head>
+<body>
+
+</body>
+</html>

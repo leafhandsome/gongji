@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>vue-vux</title>
+  <style>
+    body{position: relative}
+    .range-handle {
+      background-color: #4983e8;
+      border-radius: 100%;
+      cursor: move;
+      height: 23px;
+      position: absolute;
+      width: 23px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+      -moz-border-radius: 50px;
+      -webkit-border-radius: 50px;
+      margin-top: 30px;
+    }
+    .range-handle:before{
+      content: ' ';
+      background-color: #fff;
+      border-radius: 100%;
+      cursor: move;
+      height: 13px;
+      left: 5px;
+      top: 5px;
+      vertical-align: middle;
+      position: absolute;
+      width: 13px;
+    }
+  </style>
+</head>
+<body>
+<span class="range-handle" style="left: 100.333px; top: -14.5px;"></span>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+.container .top-time, .container .bottom-price{
+  font-size: 12px;
+  margin:  0 10px;
+  height: 20px;
+  line-height:20px;
+}
+.container .top-time p, .container .bottom-price p{
+  float: left;
+}
+.container .top-time p label, .container .bottom-price p label{
+  margin-left: 5px;
+}
+.container .bottom-price {
+  background: #FFF4F4;
+  padding: 5px;
+}
+.container .top-time .bonus,.container .bottom-price .bonus{
+  float: right;
+  text-align: right;
+}
+.container .bottom-price p{
+  width: 50%;
+}
+.container{
+  padding-bottom: 52px;
+}
+.content-item{
+  margin:5px;
+  height: 187px;
+  border: 1px solid #EAECF0;
+  border-radius: 5px;
+  position: relative;
+}
+
+.content-item .checker-item-button{
+  float: left;
+  width: 20%;
+  text-align: center;
+  margin: 5px 0;
+}
+.content-item .cker{
+  float: left;
+  width: 16.66%;
+  text-align: center;
+}
+
+.content-item .box-num{
+  margin-top: 35px;
+}
+.box-btn{
+  margin: 0 10px;
+}
+.inline-number-item{
+  width: 100%;
+  height: 60px;
+}
+.inline-number-item .inline-number-l{
+  width: 50%;
+  float: left;
+  margin-left: 10px;
+}
+.inline-number-item .inline-number-l .vux-inline-x-number{
+  margin-top: 3px;
+}
+
+.rang-item .range-handle{
+  width:25px;
+  height: 25px;
+  background-color: #4584F5;
+}
+.rang-item .range-handle:before{
+  content: ' ';
+  background-color: #fff;
+  border-radius: 100%;
+  cursor: move;
+  height: 13px;
+  left: 6px;
+  top: 6px;
+  vertical-align: middle;
+  position: absolute;
+  width: 13px;
+}
+.rang-item .range-quantity{
+  background-color: #4584F5;
+}
+.top-tab .vux-tab-selected span{
+  border-bottom: 2px solid #4584F5;
+  padding-bottom: 11px;
+}
